@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/ROP/admin_site/media/back.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+@media (max-width: 580px) {
+  body {
+    padding: 15px;
+  }
+}
+
+.login-form {
+  padding: 20px;
+  background: linear-gradient(0deg, rgb(1, 0, 10) 0%, rgb(74, 71, 148) 36%, rgb(105, 105, 122) 80%);
+  border-radius: 10px;
+}
+.login-form form {
+  display: grid;
+  height: 600px;
+  max-width: 500px;
+  justify-items: center;
+  align-items: center;
+}
+.login-form form .logo img {
+  height: 120px;
+  opacity: 0.7;
+}
+.login-form form .login-name {
+  font-size: 50px;
+  margin-top: -50px;
+}
+.login-form form .username {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  width: 70%;
+}
+.login-form form .username .fa-user {
+  font-size: 50px;
+}
+.login-form form .username ::-moz-placeholder {
+  color: white;
+  font-size: 40px;
+}
+.login-form form .username ::placeholder {
+  color: white;
+  font-size: 40px;
+}
+@media (max-width: 400px) {
+  .login-form form .username ::-moz-placeholder {
+    font-size: 30px;
+  }
+  .login-form form .username ::placeholder {
+    font-size: 30px;
+  }
+}
+@media (max-width: 340px) {
+  .login-form form .username ::-moz-placeholder {
+    font-size: 25px;
+  }
+  .login-form form .username ::placeholder {
+    font-size: 25px;
+  }
+}
+.login-form form .wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.login-form form .password {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  width: 70%;
+}
+.login-form form .password .fa-lock {
+  font-size: 50px;
+}
+.login-form form .password ::-moz-placeholder {
+  color: white;
+  font-size: 40px;
+}
+.login-form form .password ::placeholder {
+  color: white;
+  font-size: 40px;
+}
+@media (max-width: 400px) {
+  .login-form form .password ::-moz-placeholder {
+    font-size: 30px;
+  }
+  .login-form form .password ::placeholder {
+    font-size: 30px;
+  }
+}
+@media (max-width: 340px) {
+  .login-form form .password ::-moz-placeholder {
+    font-size: 25px;
+  }
+  .login-form form .password ::placeholder {
+    font-size: 25px;
+  }
+}
+.login-form form input {
+  background: transparent;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-size: 40px;
+}
+@media (max-width: 400px) {
+  .login-form form input {
+    font-size: 30px;
+  }
+}
+.login-form form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.login-form form input:focus::placeholder {
+  color: transparent;
+}
+.login-form form input:focus {
+  outline: none;
+}
+.login-form form .focus-input {
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+  width: 100%;
+  transition: 1s;
+}
+.login-form form .login button {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: white;
+  color: rgb(33, 33, 33);
+  width: 120px;
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border-radius: 30px;
+  transition: color 0.5s, background 1s;
+}
+.login-form form .login button:hover {
+  background: rgba(20, 75, 119, 0.471);
+  color: white;
+}/*# sourceMappingURL=login.css.map */

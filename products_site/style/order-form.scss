@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+form {
+    min-height: 50vh;
+}
+body {
+    background: white;
+}
+.cart-page {
+    margin-top: 50px;
+    margin-bottom: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                th{
+                    font-size: 15px;
+                    text-align: left;
+                    padding: 5px;
+                    color: #e0ac1c;
+                    background: #2d2a30;
+                    font-weight: normal;
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+                td{
+                    padding: 10px 5px;
+                    .cart-info{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        img {
+                            height: 80px;
+                            margin-right: 10px;
+                        }
+
+                        div{
+                            p {
+                                font-size: 15px;
+                            }
+                            button {
+                                color: #e0ac1c;
+                                font-size: 12px;
+                                border: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    input {
+                        width: 40px;
+                        height: 30px;
+                        padding: 5px;
+                    }
+                }
+            }
+
+        }
+}
+
+
+.total-price {
+    display: grid;
+    justify-items: end;
+    table {
+        border-top: 3px solid #e0ac1c;
+        width: 100%;
+        max-width: 350px;
+        tr {
+            &:last-child {
+                background: #2d2a30;
+                td {
+                    color: #e0ac1c;
+                }
+                
+            }
+        }
+    }
+}
+
+td:last-child{
+    text-align: right;
+}
+
+
+@media(max-width: 450px){
+    .product-name {
+        display: none;
+    }
+}
+.next-btn{
+    width: 100%;
+    max-width: 350px;
+    .next-button {
+        margin-top: 20px;
+        width: 100%;
+        display: inline;
+        background-color: #144272;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+}
+
+.next-button {
+    margin-top: 20px;
+    width: 100%;
+    display: inline;
+    background-color: #144272;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+        color: white;
+    }
+}
+.form-1 {
+    padding: 50px 20px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        gap: 80px;
+        width: 80%;
+        @media(max-width: 600px){
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        .btn{
+
+            width: 50%;
+            background: #144272;
+            outline: none;
+            &:last-child {
+                justify-self: end;
+            }
+        }
+    
+    }
+    
+}
+
+a {
+    text-decoration: none;
+}
+.total-price {
+    
+    .buttons {
+        width: 100%;
+        max-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 85px;
+        &:first-child {
+            justify-items: end;
+        }
+        .btn {
+            margin-top: 20px;
+            display: grid;
+            align-content: center;
+        }
+    }
+}
+
+.contact {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    color: #e0ac1c;
+    background: #2d2a30;
+    font-weight: normal;
+}

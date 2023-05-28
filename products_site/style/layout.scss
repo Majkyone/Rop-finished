@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    //background: #24535f;
+    //background: #F2E9E2;
+    background: #ffffff;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+
+}
+
+.wrapper {
+    
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    @media(max-width: 750px){
+        grid-template-columns: 2fr 5fr;
+        
+    }
+    .search-panel {
+        
+        //background: #665048de;
+        //background: #008080;
+        background: #663399;
+        //background: #8b008b;
+        background: #d37e00;
+        .panel {
+            top: 14vh;
+            position: sticky;
+            padding: 0 7px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+           
+        } 
+        .arrow {
+            display: none;
+        } 
+        
+    }
+    @media(max-width: 500px){
+        .search-panel {
+            position: absolute;
+            left: 0;
+            
+            .panel {
+                display: none;
+                transition: 0.5s;
+                
+                &.active {
+                    display: block;
+                    position: fixed;
+                    z-index: 9;
+                    left: 40px;
+                    background: rgb(211 126 0 / 87%);
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            }
+            
+            .arrow {
+                color: #e0ac1c;
+                z-index: 2;
+                font-size: 20px;
+                display: block;
+                top: 50px;
+                left: 5px;
+                position: fixed;
+                padding-left: 10px;
+                text-decoration: none;
+                transition: 0.7s;
+                &.clicked {
+                    transform: rotateX(180deg) rotate(180deg);
+                }
+            }
+        }
+        
+        display: flex;
+        justify-content: center;
+       
+    }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+        @media(max-width: 1365px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media(max-width: 1080px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(max-width: 750px){
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+        
+        .product {
+            display: grid;
+            width: 100%;
+            background: white;
+            justify-items: center;
+            align-items: center;
+            img {
+                padding-top: 20px;
+                width: 100%;
+            }
+            .name {
+                margin-top: 0px;
+                font-size: 3rem;
+            }
+            .description {
+                font-size: 2rem;
+            }
+            .price {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+fieldset {
+    label {
+        margin: 5px 0;
+        color: white;
+        font-size: 18px;
+    }
+    .range {
+        width: 100%;
+    }
+}
+
+.prices {
+    display: grid;
+    grid-template-columns: 1.45fr 1.98fr;
+    width: 100%;
+    div {
+        color: white;
+        font-size: 15px;
+        &:last-child{
+            text-align: right;
+        }
+    }
+    
+}
+.form-control {
+    line-height: 2;
+    font-size: 15px;
+    &:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+.form-select {
+    &:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+.search {
+    
+    font-size: 12px;
+    &:hover {
+        .span-text-search{
+            color: black;    
+        }
+        
+    }
+    .span-text-search {
+        display: block;
+        color: white;
+        
+    }
+
+       
+    .span-search {
+        display: block; 
+        i {
+            color: white;
+            background: white;
+        }
+    }
+        
+    
+}
+
+.s-btn {
+    background: white;
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+.no-results-grid{
+    height: 80vh;
+    display: grid;
+    font-size: 6.2vw;
+    justify-content: center;
+    align-content: center;
+    
+    .no-results {
+        text-align: center;
+        color: gray;
+        opacity: 0.8;
+        
+    }
+}
